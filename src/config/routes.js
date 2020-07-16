@@ -1,109 +1,134 @@
-//PirvatePages
+//PivatePages
 import AddingShipperPage from '../components/pages/PrivatePages/AddingShipper';
 import CreateUserPage from '../components/pages/PrivatePages/CreateUser';
 import DeleteAllDataPage from '../components/pages/PrivatePages/DeleteAllData';
 import ResetPasswordPage from '../components/pages/PrivatePages/ResetPassword';
 import ToolsPage from '../components/pages/PrivatePages/Tools';
 import UserListPage from '../components/pages/PrivatePages/UserList';
+import AboutPage from '../components/pages/PrivatePages/About';
+import AddingCompanyDetailsPage from '../components/pages/PrivatePages/AddingCompanyDetails';
+import AddingProductDetailsPage from '../components/pages/PrivatePages/AddingProductDetails';
+import AddingProductUomPage from '../components/pages/PrivatePages/AddingProductUom';
+import ContactUsPage from '../components/pages/PrivatePages/ContactUs';
+import EntryPage from '../components/pages/PrivatePages/Entry';
+import ExportEntryPage from '../components/pages/PrivatePages/ExportEntry';
+import HelpPage from '../components/pages/PrivatePages/Help';
+import ImportEntryPage from '../components/pages/PrivatePages/ImportEntry';
+import MyHomePage from '../components/pages/PrivatePages/MyHome';
+import ProductPage from '../components/pages/PrivatePages/Product';
 
 //PublicPages
-import AboutPage from '../components/pages/PublicPages/About';
-import AddingCompanyDetailsPage from '../components/pages/PublicPages/AddingCompanyDetails';
-import AddingProductDetailsPage from '../components/pages/PublicPages/AddingProductDetails';
-import AddingProductUomPage from '../components/pages/PublicPages/AddingProductUom';
-import ContactUsPage from '../components/pages/PublicPages/ContactUs';
-import EntryPage from '../components/pages/PublicPages/Entry';
-import ExportEntryPage from '../components/pages/PublicPages/ExportEntry';
-import HelpPage from '../components/pages/PublicPages/Help';
-import ImportEntryPage from '../components/pages/PublicPages/ImportEntry';
 import LoginPage from '../components/pages/PublicPages/Login';
-import LogoutPage from '../components/pages/PublicPages/Logout';
-import MyHomePage from '../components/pages/PublicPages/MyHome';
-import ProductPage from '../components/pages/PublicPages/Product';
 
 const components = {
-    
+
     //PrivatePages
 
-    AddingShipperPage: {
-        url: '/AddingShipperPage',
+    addingShipper: {
+        url: '/addingShipper',
         component: AddingShipperPage
     },
-    CreateUserPage: {
-        url: '/CreateUserPage',
+    createUser: {
+        url: '/createUser',
         component: CreateUserPage
     },
-    DeleteAllDataPage: {
-        url: '/DeleteAllDataPage',
+    deleteAllData: {
+        url: '/deleteAllData',
         component: DeleteAllDataPage
     },
-    ResetPasswordPage: {
-        url: '/ResetPasswordPage',
+    resetPassword: {
+        url: '/resetPassword',
         component: ResetPasswordPage
     },
-    ToolsPage: {
-        url: '/ToolsPage',
+    toolsPage: {
+        url: '/toolsPage',
         component: ToolsPage
     },
-    UserListPage: {
-        url: '/UserListPage',
+    userList: {
+        url: '/userList',
         component: UserListPage
     },
 
     //PublicPage
 
-    About: {
-        url: '/About',
+    about: {
+        url: '/about',
         component: AboutPage
     },
-    AddingCompanyDetails: {
-        url: '/AddingCompanyDetails',
+    addingCompanyDetails: {
+        url: '/addingCompanyDetails',
         component: AddingCompanyDetailsPage
     },
-    AddingProductDetails: {
-        url: '/AddingProductDetails',
+    addingProductDetails: {
+        url: '/addingProductDetails',
         component: AddingProductDetailsPage
     },
-    AddingProductUom: {
-        url: '/AddingProductUom',
+    addingProductUom: {
+        url: '/addingProductUom',
         component: AddingProductUomPage
     },
-    ContactUs: {
-        url: '/ContactUs',
+    contactUs: {
+        url: '/contactUs',
         component: ContactUsPage
     },
-    Entry: {
-        url: '/Entry',
+    entry: {
+        url: '/entry',
         component: EntryPage
     },
-    ExportEntry: {
-        url: '/ExportEntry',
+    exportEntry: {
+        url: '/exportEntry',
         component: ExportEntryPage
     },
-    Help: {
-        url: '/Help',
+    help: {
+        url: '/help',
         component: HelpPage
     },
-    ImportEntry: {
-        url: '/ImportEntry',
+    importEntry: {
+        url: '/importEntry',
         component: ImportEntryPage
     },
-    Login: {
-        url: '/Login',
+    login: {
+        url: '/login',
         component: LoginPage
     },
-    Logout: {
-        url: '/Logout',
-        component: LogoutPage
-    },
-    MyHome: {
-        url: '/MyHome',
+    myHome: {
+        url: '/myHome',
         component: MyHomePage
     },
-    Product: {
-        url: '/Product',
+    product: {
+        url: '/product',
         component: ProductPage
     },
 
+}
 
+export default {
+    user: {
+        allowedRoutes: [
+            components.about,
+            components.addingCompanyDetails,
+            components.addingProductDetails,
+            components.addingProductUom,
+            components.contactUs,
+            components.exportEntry,
+            components.help,
+            components.importEntry,
+            components.login,
+            components.myHome,
+            components.product,
+        ],
+        redirectRoutes: '/login',
+    },
+    Admin: {
+        allowedRoutes: [
+            components.addingShipper,
+            components.createUser,
+            components.deleteAllData,
+            components.resetPassword,
+            components.tools,
+            components.userList,
+            components.login,
+        ],
+        redirectRoutes: '/login'
+    },
 }
