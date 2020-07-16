@@ -3,20 +3,20 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 
 
-
 function MyHome() {
 
   const { SubMenu } = Menu;
   const { Header, Content, Sider } = Layout;
-  
+
   return (
     <Layout>
     <Header className="header">
       <div className="logo" />
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
+        <Menu.Item key="1">nav 1 การจัดการสินค้า</Menu.Item>
+        <Menu.Item key="2">nav 2 บันทึกใบขน</Menu.Item>
+        <Menu.Item key="3">nav 3 เครื่องมือ</Menu.Item>
+        <Menu.Item key="4">nav 4 ช่วยเหลือ</Menu.Item>
       </Menu>
     </Header>
     <Layout>
@@ -28,22 +28,24 @@ function MyHome() {
           style={{ height: '100%', borderRight: 0 }}
         >
           <SubMenu key="sub1" icon={<UserOutlined />} title="subnav 1">
-            <Menu.Item key="1">option1</Menu.Item>
-            <Menu.Item key="2">option2</Menu.Item>
-            <Menu.Item key="3">option3</Menu.Item>
-            <Menu.Item key="4">option4</Menu.Item>
+            <Menu.Item key="1">option1 รายละเอียดหน่วยของสินค้า</Menu.Item>
+            <Menu.Item key="2">option2 รายละเอียดสินค้า</Menu.Item>
+            <Menu.Item key="3">option3 รายละเอียดของบริษัท</Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
-            <Menu.Item key="5">option5</Menu.Item>
-            <Menu.Item key="6">option6</Menu.Item>
-            <Menu.Item key="7">option7</Menu.Item>
-            <Menu.Item key="8">option8</Menu.Item>
+            <Menu.Item key="4">option4 ใบขนขาเข้า</Menu.Item>
+            <Menu.Item key="5">option5 ใบขนขาออก</Menu.Item>
           </SubMenu>
           <SubMenu key="sub3" icon={<NotificationOutlined />} title="subnav 3">
-            <Menu.Item key="9">option9</Menu.Item>
-            <Menu.Item key="10">option10</Menu.Item>
-            <Menu.Item key="11">option11</Menu.Item>
-            <Menu.Item key="12">option12</Menu.Item>
+            <Menu.Item key="6">option6 สร้างผู้ใช้</Menu.Item>
+            <Menu.Item key="7">option7 เปลี่ยนรหัสผ่านผู้ใช้</Menu.Item>
+            <Menu.Item key="8">option8 เพิ่มรายละเอียดผู้นำเข้า</Menu.Item>
+            <Menu.Item key="9">option9 ลบข้อมูลภายในบริษัท</Menu.Item>
+          </SubMenu>
+          <SubMenu key="sub4" icon={<NotificationOutlined />} title="subnav 4">
+            <Menu.Item key="10">option10 ติดต่อเรา</Menu.Item>
+            <Menu.Item key="11">option11 เกี่ยวกับเรา</Menu.Item>
+
           </SubMenu>
         </Menu>
       </Sider>

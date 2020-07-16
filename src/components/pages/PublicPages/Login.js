@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { Alert, AlertTitle } from '@material-ui/lab';
 import { login } from '../../../api/auth';
-
+import { setToken } from '../../../services/localStorageServices';
 
 //CSS 
 
@@ -54,8 +54,11 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
+
+
 export default function SignInSide() {
-  
+
   const classes = useStyles();
 
   const [username, setUsername] = useState('')
@@ -68,11 +71,11 @@ export default function SignInSide() {
   const submitLogin = async (e) => {
     e.preventDefault()
     try {
-      // const res = await login(username,password)
+      const res = await login(username,password)
+      setToken(res.data.token)
       history.push('/myHome')
     } catch(err){
       setError(err.response.data)
-      console.dir(err)
       setTimeout(() => setError(null), 5000)
     }
   }
