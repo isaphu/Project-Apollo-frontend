@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import {
   DesktopOutlined,
@@ -34,16 +34,13 @@ class SiderDemo extends React.Component {
               Option 2
             </Menu.Item>
             <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-              <Menu.Item key="3">การจัดการสินค้า</Menu.Item>
-              <Menu.Item key="4">บันทึกรายงาน</Menu.Item>
-              <Menu.Item key="5">เครื่องมือ</Menu.Item>
-              <Menu.Item key="5">ช่วยเหลือ</Menu.Item>
+              <Menu.Item key="3">Tom</Menu.Item>
+              <Menu.Item key="4">Bill</Menu.Item>
+              <Menu.Item key="5">Alex</Menu.Item>
             </SubMenu>
-            <SubMenu key="sub2" icon={<TeamOutlined />} title="Admin">
-              <Menu.Item key="6">การจัดการผู้ใช้</Menu.Item>
-              <Menu.Item key="8">เพิ่มรายละเอียดผู้นำเข้า</Menu.Item>
-              <Menu.Item key="8">เพิ่มรายละเอียดบริษัท</Menu.Item>
-              <Menu.Item key="8">แก้ไข หรือ ลบข้อมูลของบริษัท</Menu.Item>
+            <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
+              <Menu.Item key="6">Team 1</Menu.Item>
+              <Menu.Item key="8">Team 2</Menu.Item>
             </SubMenu>
             <Menu.Item key="9" icon={<FileOutlined />} />
           </Menu>
@@ -53,7 +50,7 @@ class SiderDemo extends React.Component {
           <Content style={{ margin: '0 16px' }}>
             <Breadcrumb style={{ margin: '16px 0' }}>
               <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Team</Breadcrumb.Item>
+              <Breadcrumb.Item>Bill</Breadcrumb.Item>
             </Breadcrumb>
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
               Bill is a cat.

@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import MyHome from './components/pages/PublicPages/MyHome'
+import { Switch, Route } from 'react-router-dom'
+import Login from './components/pages/PublicPages/Login'
 
 function App() {
   return (
-    <div className="App">
-      <MyHome />
-    </div>
+
+    <Login />
+
   );
 }
 
