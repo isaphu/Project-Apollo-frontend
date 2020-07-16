@@ -16,5 +16,5 @@ const auth = (state = { user: null}, action ) => {
 
 // Store
 export const store = createStore(
-  combineReducers(auth)
+  combineReducers({auth})
 );

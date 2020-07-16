@@ -1,12 +1,27 @@
 import React from 'react'
+import {useHistory} from 'react-router-dom';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import { useSelector, useDispatch } from 'react-redux';
+import { Button } from 'antd';
+
 
 
 function MyHome() {
 
   const { SubMenu } = Menu;
   const { Header, Content, Sider } = Layout;
+  const  user = useSelector(state => state.auth.user)
+  const dispatch = useDispatch()
+  const history = useHistory()
+
+  const submitLogout = () => {
+    console.log('asfsdf')
+    dispatch({
+      type: 'LOGOUT',
+    })
+    history.push('/login')
+  }
 
   return (
     <Layout>
@@ -17,6 +32,8 @@ function MyHome() {
         <Menu.Item key="2">nav 2 บันทึกใบขน</Menu.Item>
         <Menu.Item key="3">nav 3 เครื่องมือ</Menu.Item>
         <Menu.Item key="4">nav 4 ช่วยเหลือ</Menu.Item>
+        <Menu.Item key="4">ขอตอนรับ {user.firstname} {user.lastname} เข้าสู่ระบบ</Menu.Item>
+        <Button type="primary" onClick={submitLogout}>Logout</Button>
       </Menu>
     </Header>
     <Layout>
@@ -45,7 +62,6 @@ function MyHome() {
           <SubMenu key="sub4" icon={<NotificationOutlined />} title="subnav 4">
             <Menu.Item key="10">option10 ติดต่อเรา</Menu.Item>
             <Menu.Item key="11">option11 เกี่ยวกับเรา</Menu.Item>
-
           </SubMenu>
         </Menu>
       </Sider>

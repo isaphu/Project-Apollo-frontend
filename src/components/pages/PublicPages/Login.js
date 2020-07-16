@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -67,16 +68,23 @@ export default function SignInSide() {
 
   const history = useHistory();
 
-
+  const user = useSelector(state => state.auth.user)
+  const dispatch = useDispatch();
+  
   const submitLogin = async (e) => {
     e.preventDefault()
     try {
       const res = await login(username,password)
+          dispatch({
+            type: 'LOGIN',
+            payload: {user: res.data.user}
+          })
       setToken(res.data.token)
       history.push('/myHome')
+
     } catch(err){
       setError(err.response.data)
-      setTimeout(() => setError(null), 5000)
+      setTimeout(() => setError(null), 10000)
     }
   }
   
