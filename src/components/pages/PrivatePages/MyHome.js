@@ -28,11 +28,12 @@ function MyHome() {
     <Header className="header">
       <div className="logo" />
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-        <Menu.Item key="1">nav 1 การจัดการสินค้า</Menu.Item>
+        {/* <Menu.Item key="1">nav 1 การจัดการสินค้า</Menu.Item>
         <Menu.Item key="2">nav 2 บันทึกใบขน</Menu.Item>
         <Menu.Item key="3">nav 3 เครื่องมือ</Menu.Item>
-        <Menu.Item key="4">nav 4 ช่วยเหลือ</Menu.Item>
-        <Menu.Item key="4">ขอตอนรับ {user.firstname} {user.lastname} เข้าสู่ระบบ</Menu.Item>
+        <Menu.Item key="4">nav 4 ช่วยเหลือ</Menu.Item> */}
+        <Menu.Item key="4">ขอตอนรับ  เข้าสู่ระบบ</Menu.Item>
+        {/* {user.firstname} {user.lastname} */}
         <Button type="primary" onClick={submitLogout}>Logout</Button>
       </Menu>
     </Header>
@@ -44,32 +45,30 @@ function MyHome() {
           defaultOpenKeys={['sub1']}
           style={{ height: '100%', borderRight: 0 }}
         >
-          <SubMenu key="sub1" icon={<UserOutlined />} title="subnav 1">
-            <Menu.Item key="1">option1 รายละเอียดหน่วยของสินค้า</Menu.Item>
-            <Menu.Item key="2">option2 รายละเอียดสินค้า</Menu.Item>
-            <Menu.Item key="3">option3 รายละเอียดของบริษัท</Menu.Item>
+          <SubMenu key="sub1" icon={<UserOutlined />} title="การจัดการสินค้า">
+            <Menu.Item key="1">รายละเอียดหน่วยของสินค้า</Menu.Item>
+            <Menu.Item key="2">รายละเอียดสินค้า</Menu.Item>
+            <Menu.Item key="3">รายละเอียดของบริษัท</Menu.Item>
           </SubMenu>
-          <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
-            <Menu.Item key="4">option4 ใบขนขาเข้า</Menu.Item>
-            <Menu.Item key="5">option5 ใบขนขาออก</Menu.Item>
+          <SubMenu key="sub2" icon={<LaptopOutlined />} title="บันทึกใบขน">
+            <Menu.Item key="4">ใบขนขาเข้า</Menu.Item>
+            <Menu.Item key="5">ใบขนขาออก</Menu.Item>
           </SubMenu>
-          <SubMenu key="sub3" icon={<NotificationOutlined />} title="subnav 3">
-            <Menu.Item key="6">option6 สร้างผู้ใช้</Menu.Item>
-            <Menu.Item key="7">option7 เปลี่ยนรหัสผ่านผู้ใช้</Menu.Item>
-            <Menu.Item key="8">option8 เพิ่มรายละเอียดผู้นำเข้า</Menu.Item>
-            <Menu.Item key="9">option9 ลบข้อมูลภายในบริษัท</Menu.Item>
+          <SubMenu key="sub3" icon={<NotificationOutlined />} title="เครื่องมือ">
+            <Menu.Item key="6">สร้างผู้ใช้</Menu.Item>
+            <Menu.Item key="7">เปลี่ยนรหัสผ่านผู้ใช้</Menu.Item>
+            <Menu.Item key="8">เพิ่มรายละเอียดผู้นำเข้า</Menu.Item>
+            <Menu.Item key="9">ลบข้อมูลภายในบริษัท</Menu.Item>
           </SubMenu>
-          <SubMenu key="sub4" icon={<NotificationOutlined />} title="subnav 4">
-            <Menu.Item key="10">option10 ติดต่อเรา</Menu.Item>
-            <Menu.Item key="11">option11 เกี่ยวกับเรา</Menu.Item>
+          <SubMenu key="sub4" icon={<NotificationOutlined />} title="ช่วยเหลือ">
+            <Menu.Item key="10">ติดต่อเรา</Menu.Item>
+            <Menu.Item key="11">เกี่ยวกับเรา</Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>
       <Layout style={{ padding: '0 24px 24px' }}>
         <Breadcrumb style={{ margin: '16px 0' }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
         </Breadcrumb>
         <Content
           className="site-layout-background"
@@ -79,7 +78,7 @@ function MyHome() {
             minHeight: 280,
           }}
         >
-          Content
+          CONTENT GOES HERE
         </Content>
       </Layout>
     </Layout>

@@ -81,7 +81,6 @@ export default function SignInSide() {
           })
       setToken(res.data.token)
       history.push('/myHome')
-
     } catch(err){
       setError(err.response.data)
       setTimeout(() => setError(null), 10000)
