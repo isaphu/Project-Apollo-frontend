@@ -1,13 +1,12 @@
 import React from 'react'
-import {useHistory} from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { Button } from 'antd';
 
 
-
-function MyHome() {
+function MyHome(props) {
 
   const { SubMenu } = Menu;
   const { Header, Content, Sider } = Layout;
@@ -28,12 +27,7 @@ function MyHome() {
     <Header className="header">
       <div className="logo" />
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-        {/* <Menu.Item key="1">nav 1 การจัดการสินค้า</Menu.Item>
-        <Menu.Item key="2">nav 2 บันทึกใบขน</Menu.Item>
-        <Menu.Item key="3">nav 3 เครื่องมือ</Menu.Item>
-        <Menu.Item key="4">nav 4 ช่วยเหลือ</Menu.Item> */}
-        <Menu.Item key="4">ขอตอนรับ {user.firstname} เข้าสู่ระบบ</Menu.Item>
-        {/* {user.firstname} {user.lastname} */}
+        <Menu.Item key="4">ขอตอนรับ  เข้าสู่ระบบ</Menu.Item>
         <Button type="primary" onClick={submitLogout}>Logout</Button>
       </Menu>
     </Header>
@@ -46,9 +40,9 @@ function MyHome() {
           style={{ height: '100%', borderRight: 0 }}
         >
           <SubMenu key="sub1" icon={<UserOutlined />} title="การจัดการสินค้า">
-            <Menu.Item key="1">รายละเอียดหน่วยของสินค้า</Menu.Item>
-            <Menu.Item key="2">รายละเอียดสินค้า</Menu.Item>
-            <Menu.Item key="3">รายละเอียดของบริษัท</Menu.Item>
+            <Menu.Item key="1" >รายละเอียดหน่วยของสินค้า <Link to="/addingProductUom" /> </Menu.Item>
+            <Menu.Item key="2">รายละเอียดสินค้า <Link to="/addingProductDetails" /> </Menu.Item>
+            <Menu.Item key="3">รายละเอียดของบริษัท <Link to="/addingCompanyDetails" /> </Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" icon={<LaptopOutlined />} title="บันทึกใบขน">
             <Menu.Item key="4">ใบขนขาเข้า</Menu.Item>
@@ -70,7 +64,7 @@ function MyHome() {
         <Breadcrumb style={{ margin: '16px 0' }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
         </Breadcrumb>
-        {children}
+        {props.children}
       </Layout>
     </Layout>
   </Layout>
