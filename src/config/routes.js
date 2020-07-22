@@ -1,24 +1,24 @@
 //PivatePages
-import AddingShipperPage from '../components/pages/PrivatePages/AddingShipper';
-import CreateUserPage from '../components/pages/PrivatePages/CreateUser';
-import DeleteAllDataPage from '../components/pages/PrivatePages/DeleteAllData';
-import ResetPasswordPage from '../components/pages/PrivatePages/ResetPassword';
-import ToolsPage from '../components/pages/PrivatePages/Tools';
-import UserListPage from '../components/pages/PrivatePages/UserList';
-import AboutPage from '../components/pages/PrivatePages/About';
-import AddingCompanyDetailsPage from '../components/pages/PrivatePages/AddingCompanyDetails';
-import AddingProductDetailsPage from '../components/pages/PrivatePages/AddingProductDetails';
-import AddingProductUomPage from '../components/pages/PrivatePages/AddingProductUom';
-import ContactUsPage from '../components/pages/PrivatePages/ContactUs';
-import EntryPage from '../components/pages/PrivatePages/Entry';
-import ExportEntryPage from '../components/pages/PrivatePages/ExportEntry';
-import HelpPage from '../components/pages/PrivatePages/Help';
-import ImportEntryPage from '../components/pages/PrivatePages/ImportEntry';
-import MyHomePage from '../components/pages/PrivatePages/MyHome';
-import ProductPage from '../components/pages/PrivatePages/Product';
+import AddingShipper from '../components/pages/PrivatePages/AddingShipper';
+import CreateUser from '../components/pages/PrivatePages/CreateUser';
+import DeleteAllData from '../components/pages/PrivatePages/DeleteAllData';
+import ResetPassword from '../components/pages/PrivatePages/ResetPassword';
+import Tools from '../components/pages/PrivatePages/Tools';
+import UserList from '../components/pages/PrivatePages/UserList';
+import About from '../components/pages/PrivatePages/About';
+import AddingCompanyDetails from '../components/pages/PrivatePages/AddingCompanyDetails';
+import AddingProductDetails from '../components/pages/PrivatePages/AddingProductDetails';
+import AddingProductUom from '../components/pages/PrivatePages/AddingProductUom';
+import ContactUs from '../components/pages/PrivatePages/ContactUs';
+import Entry from '../components/pages/PrivatePages/Entry';
+import ExportEntry from '../components/pages/PrivatePages/ExportEntry';
+import Help from '../components/pages/PrivatePages/Help';
+import ImportEntry from '../components/pages/PrivatePages/ImportEntry';
+import MyHome from '../components/pages/PrivatePages/MyHome';
+import Product from '../components/pages/PrivatePages/Product';
 
 //PublicPages
-import LoginPage from '../components/pages/PublicPages/Login';
+import Login from '../components/pages/PublicPages/Login';
 
 const components = {
 
@@ -26,78 +26,79 @@ const components = {
 
     addingShipper: {
         url: '/addingShipper',
-        component: AddingShipperPage
+        component: AddingShipper
     },
     createUser: {
         url: '/createUser',
-        component: CreateUserPage
+        component: CreateUser
     },
     deleteAllData: {
         url: '/deleteAllData',
-        component: DeleteAllDataPage
+        component: DeleteAllData
     },
     resetPassword: {
         url: '/resetPassword',
-        component: ResetPasswordPage
+        component: ResetPassword
     },
     toolsPage: {
         url: '/toolsPage',
-        component: ToolsPage
+        component: Tools
     },
     userList: {
         url: '/userList',
-        component: UserListPage
+        component: UserList
+    },
+    myHome: {
+        url: '/myHome',
+        component: MyHome
     },
 
     //PublicPage
 
     about: {
         url: '/about',
-        component: AboutPage
+        component: About
     },
     addingCompanyDetails: {
         url: '/addingCompanyDetails',
-        component: AddingCompanyDetailsPage
+        component: AddingCompanyDetails
     },
     addingProductDetails: {
         url: '/addingProductDetails',
-        component: AddingProductDetailsPage
+        component: AddingProductDetails
     },
     addingProductUom: {
         url: '/addingProductUom',
-        component: AddingProductUomPage
+        component: AddingProductUom
     },
     contactUs: {
         url: '/contactUs',
-        component: ContactUsPage
+        component: ContactUs
     },
     entry: {
         url: '/entry',
-        component: EntryPage
+        component: Entry
     },
     exportEntry: {
         url: '/exportEntry',
-        component: ExportEntryPage
+        component: ExportEntry
     },
     help: {
         url: '/help',
-        component: HelpPage
+        component: Help
     },
     importEntry: {
         url: '/importEntry',
-        component: ImportEntryPage
+        component: ImportEntry
     },
     login: {
         url: '/login',
-        component: LoginPage
+        component: Login
     },
-    myHome: {
-        url: '/myHome',
-        component: MyHomePage
-    },
+    
     product: {
         url: '/product',
-        component: ProductPage
+        component: Product
     },
 
 }

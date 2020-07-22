@@ -32,7 +32,7 @@ function MyHome() {
         <Menu.Item key="2">nav 2 บันทึกใบขน</Menu.Item>
         <Menu.Item key="3">nav 3 เครื่องมือ</Menu.Item>
         <Menu.Item key="4">nav 4 ช่วยเหลือ</Menu.Item> */}
-        <Menu.Item key="4">ขอตอนรับ  เข้าสู่ระบบ</Menu.Item>
+        <Menu.Item key="4">ขอตอนรับ {user.firstname} เข้าสู่ระบบ</Menu.Item>
         {/* {user.firstname} {user.lastname} */}
         <Button type="primary" onClick={submitLogout}>Logout</Button>
       </Menu>
@@ -70,16 +70,7 @@ function MyHome() {
         <Breadcrumb style={{ margin: '16px 0' }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
         </Breadcrumb>
-        <Content
-          className="site-layout-background"
-          style={{
-            padding: 24,
-            margin: 0,
-            minHeight: 280,
-          }}
-        >
-          CONTENT GOES HERE
-        </Content>
+        {children}
       </Layout>
     </Layout>
   </Layout>
