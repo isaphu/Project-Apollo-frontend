@@ -1,9 +1,9 @@
 import React from 'react';
 import ConfigRoutes from '../../config/routes';
-import { Redirect, Switch, Route, useHistory } from 'react-router-dom';
+import { Redirect, Switch, Route, useHistory, useLocation } from 'react-router-dom';
 import { getToken } from '../../services/localStorageServices';
-import Login from '../pages/PublicPages/Login'
-
+import Login from '../pages/PublicPages/Login';
+import Layout from '../pages/layout/Layout';
 
 function PrivateRoutes(props) {
     const role = props.role || 'user';
@@ -11,6 +11,7 @@ function PrivateRoutes(props) {
     const allowedRoutes = ConfigRoutes[role].allowedRoutes;
     const redirectRoutes = ConfigRoutes[role].redirectRoutes;
     const history = useHistory();
+    const location = useLocation();
 
     
         const isLoggedIn = getToken();
@@ -19,6 +20,10 @@ function PrivateRoutes(props) {
     // }
     if (!isLoggedIn ) {
         return <Login />;
+    }
+    console.log(location)
+    if (isLoggedIn && location.pathname === '/login') {
+        history.push('/addingProductUom')
     }
 
     return (
