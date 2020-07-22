@@ -14,7 +14,6 @@ import Entry from '../components/pages/PrivatePages/Entry';
 import ExportEntry from '../components/pages/PrivatePages/ExportEntry';
 import Help from '../components/pages/PrivatePages/Help';
 import ImportEntry from '../components/pages/PrivatePages/ImportEntry';
-import MyHome from '../components/pages/PrivatePages/MyHome';
 import Product from '../components/pages/PrivatePages/Product';
 
 //PublicPages
@@ -48,10 +47,7 @@ const components = {
         url: '/userList',
         component: UserList
     },
-    myHome: {
-        url: '/myHome',
-        component: MyHome
-    },
+  
 
     //PublicPage
 
@@ -115,7 +111,6 @@ export default {
             components.help,
             components.importEntry,
             components.login,
-            components.myHome,
             components.product,
         ],
         redirectRoutes: '/login',
@@ -133,3 +128,4 @@ export default {
         redirectRoutes: '/login'
     },
 }
+
